@@ -3,7 +3,7 @@ var mongoose = require('mongoose')
 var Schema = mongoose.Schema
 
 var GatherSchema = new Schema({
-  gatherURL: String,
+  gatherId: String,
   websiteURL: String
 })
 

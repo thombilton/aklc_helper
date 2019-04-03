@@ -23,3 +23,9 @@ app.use(function (req, res) {
 app.listen(process.env.PORT || 3000, function () {
   console.log('Express server listening on port %d in %s mode', this.address().port, app.settings.env)
 })
+
+// mongoimport --db users --collection links --type csv --headerline --file /Users/thom/Downloads/Gather Site Relation csv.csv
+
+// mongo ds157735.mlab.com:57735/acro_db -u access -p access1
+
+// mongoimport -h ds157735.mlab.com:57735 -d acro_db -c links -u access -p access1 --file /Users/thom/Downloads/GatherSiteRelation.csv --type csv --headerline
