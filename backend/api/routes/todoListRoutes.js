@@ -1,7 +1,7 @@
 'use strict'
 module.exports = function (app) {
   var todoList = require('../controllers/todoListController')
-  var linkList = require('../controllers/gatherEntryController')
+  // var linkList = require('../controllers/gatherEntryController')
 
   // todoList Routes
   app.route('/tasks')
@@ -13,6 +13,6 @@ module.exports = function (app) {
     .put(todoList.update_a_task)
     .delete(todoList.delete_a_task)
 
-  app.route('/gather')
-    .post(linkList.create_a_link)
+/*   app.route('/gather')
+    .post(linkList.create_a_link) */
 }

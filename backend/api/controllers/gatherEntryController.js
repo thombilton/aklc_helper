@@ -25,6 +25,13 @@ exports.read_a_link = function (req, res) {
   })
 }
 
+exports.findByGatherId = function (req, res) {
+  Link.find({ gatherID: req.params.taskId }, function (err, task) {
+    if (err) { res.send(err) }
+    res.json(task)
+  })
+}
+
 exports.update_a_link = function (req, res) {
   Link.findOneAndUpdate({ _id: req.params.linkID }, req.body, { new: true }, function (err, link) {
     if (err) { res.send(err) }
